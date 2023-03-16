@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hello World!</title>
+	<!-- https://electronjs.org/docs/tutorial
+						/security#csp-meta-tag -->
+	<meta http-equiv="Content-Security-Policy"
+		content="script-src 'self' 'unsafe-inline';" />
+</head>
+<style>
+	body{
+		background-color: aqua;
+	}
+	h1{
+		background-color: blue;
+		border: 2px solid red;
+	}
+	#lorem{
+		font-size: 54px;
+		color: red;
+	}
+</style>
+
+<body>
+	<h1>hello main</h1>
+    <button id="btn"> Save </button>
+    <!-- <script>
+        const ipcRenderer = require("electron").ipcRenderer;
+
+        // cannot send message to other windows directly https://github.com/electron/electron/issues/991
+        function sendCommandToWorker(content) {
+            ipcRenderer.send("printPDF", content);
+        }
+
+        document.getElementById("btn").addEventListener("click", () => {
+            // send whatever you like
+            sendCommandToWorker("<h1> hello I going to print worker </h1>");
+        });
+    </script> -->
+	<script src="index.js"></script>
+</body>
+</html>

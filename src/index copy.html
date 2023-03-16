@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hello World!</title>
+	<!-- https://electronjs.org/docs/tutorial
+						/security#csp-meta-tag -->
+	<meta http-equiv="Content-Security-Policy"
+		content="script-src 'self' 'unsafe-inline';" />
+</head>
+<style>
+	body{
+		background-color: aqua;
+	}
+	h1{
+		background-color: blue;
+		border: 2px solid red;
+	}
+	#lorem{
+		font-size: 54px;
+		color: red;
+	}
+</style>
+<body>
+	<h1>Hello World!</h1>
+	We are using node
+    <br><br>
+
+
+	<script>
+		document.write(process.versions.node)
+	</script>, Chrome
+	<script>
+		document.write(process.versions.chrome)
+	</script>, and Electron
+	<script>
+		document.write(process.versions.electron)
+	</script>.
+<div id="lorem" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa soluta dolores, nobis mollitia itaque hic cumque saepe expedita maxime, dolorem iusto similique nesciunt quae rerum nisi pariatur nulla magnam vitae.</div>
+	<!-- Adding Individual Renderer Process JS File -->
+    <button id="current">
+        Print Current Content of Page
+    </button>
+    <br><br>
+  <button id="url">Print Google.com Homepage</button>
+  <button id="print">Print Window</button>
+	<script src="index.js"></script>
+</body>
+</html>
