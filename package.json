@@ -1,18 +1,18 @@
 {
   "name": "master-electron",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Master Electron Course Code",
   "main": "main.js",
-  "repository": { 
-  "type" : "git", 
-  "url" : "https://github.com/unitraf/electron.git" 
-},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unitraf/test.git"
+  },
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
     "reset": "git reset --hard",
-    "build": "electron-builder build --mac --win --publish never",
-"deploy": "electron-builder build --mac --win --publish always"
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build -w -p onTagOrDraft"
   },
   "keywords": [
     "Electron",
@@ -23,6 +23,7 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^5.0.0",
+    "electron-builder": "^23.6.0",
     "nodemon": "^1.18.9"
   },
   "dependencies": {
